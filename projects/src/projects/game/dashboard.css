@@ -1,0 +1,24 @@
+.dashboard-container {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #002f49, #003f5c);
+  min-height: 100vh;
+  color: white;
+}
+
+.counter {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.dashboard-display {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,77 @@
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f9f9f9, #e3e3e3);
+    padding: 20px;
+  }
+  
+  .contact-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 5px solid #007bff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .contact-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    border-color: #0056b3;
+  }
+  
+  .contact-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  
+  .contact-input,
+  .contact-textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+  }
+  
+  .contact-input:focus,
+  .contact-textarea:focus {
+    border-color: #ff5733;
+  }
+  
+  
+  .contact-textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  .contact-button {
+    background: #ff5733;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .contact-button:hover {
+    background: white;
+    color: #ff5733;
+    border: 2px solid #ff5733;
+  }
+  
+  
+  

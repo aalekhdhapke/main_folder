@@ -1,0 +1,46 @@
+/* header.css */
+
+.header-main {
+  background-color: #282c34; 
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.header-sec-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-button-one {
+  cursor: alias;
+  border-radius: 5px;
+  height: 10vh;
+  transition: background-color 0.3s ease;
+}
+
+.header-button-one:hover {
+  background-color: #e67e22; 
+}
+
+.button-main {
+  display: flex;
+  align-items: center;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  
+
+  .header-button-one {
+      height: 8vh;
+      width: 50%; /* Adjust width for better visibility */
+      margin-top: 10px;
+  }
+
+  .button-main {
+      margin-top: 10px;
+  }
+}

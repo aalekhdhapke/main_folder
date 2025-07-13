@@ -1,0 +1,33 @@
+/* main */
+.main-img{
+    height: 8vh;
+    margin-left: 94%;
+    border-radius: 10px;
+
+    }
+
+
+
+/* Cart image */
+.cart-ico {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  
+  /* Cart count badge */
+  .cart-count {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-color: #ff0000;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50%;
+  }
+  

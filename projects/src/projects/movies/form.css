@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.movies-main-movies-form {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    margin-left: 35%;
+    margin-top: 4%;
+}
+
+.movies-container {
+    text-align: center;
+}
+
+.movies-form-box {
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(255, 174, 0, 0.3);
+    width: 350px;
+}
+
+.movies-title {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.movies-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.movies-input:focus {
+    background: #444;
+    box-shadow: 0px 0px 8px rgba(255, 174, 0, 0.8);
+}
+
+.movies-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #ffae00, #ff6f00);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.movies-button:hover {
+    background: linear-gradient(45deg, #ff9200, #ff4500);
+    box-shadow: 0px 4px 10px rgba(255, 174, 0, 0.5);
+}
+
+/* MEDIA QUERIES */
+
+/* Large screens (laptops/desktops) */
+@media (max-width: 1200px) {
+    .movies-main-movies-form {
+        margin-left: 30%;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    .movies-main-movies-form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    .movies-form-box {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 480px) {
+    .movies-main-movies-form {
+        width: 70%;
+        margin: 5% auto;
+    }
+
+    .movies-form-box {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .movies-title {
+        font-size: 18px;
+    }
+
+    .movies-input {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .movies-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

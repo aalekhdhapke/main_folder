@@ -1,0 +1,43 @@
+.layout-body {
+    background-color: #e9e9e9;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    
+
+
+  }
+  .layout-main {
+    padding: 10px;
+    text-align: center;
+    height: 95.5vh;
+
+  }
+  .layout-buttons {
+    height: 7vh;
+    width: 10vw;
+    box-shadow: 5px 5px 5px #7d7d7d;
+    color: #ff9191;
+    background-color: #e2e2e2;
+    border-radius: 7px;
+    font-size: 3vh;
+    text-align: center;
+  }
+  .layout-buttons2 {
+    height: 7vh;
+    width: 10vw;
+    box-shadow: 5px 5px 5px rgb(125, 125, 125);
+    color: lightcoral;
+    background-color:  #e2e2e2;
+    border-radius: 7px;
+    font-size: 3vh;
+    text-align: center;
+  }
+  .layout-display {
+    height: 93vh;
+    width: 85vw;
+    border-style: dashed;
+    margin-top: 10px;
+  }
+  

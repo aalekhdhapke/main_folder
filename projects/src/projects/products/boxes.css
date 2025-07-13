@@ -1,0 +1,36 @@
+.boxes-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 20px;
+}
+.boxes-container .box{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 40vw;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 55vh;
+    width: 30vw;
+}
+.boxes-container .box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.boxes-container .box img{
+    border-radius: 8px;
+    margin-bottom: 10px;
+    height: 35vh;
+}
+.boxes-container .box h2{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.boxes-container .box p{
+    font-size: 1rem;
+    color: #555;
+}           

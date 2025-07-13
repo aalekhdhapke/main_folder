@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Coming+Soon&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.products-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin: 20px 0;
+    font-family: "Coming Soon", cursive;
+    font-weight: 500;
+    font-style:oblique;
+    color:lightcoral;
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 20px;
+}
+
+.product-card-one,
+.product-card-two {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 40vw;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-one:hover,
+.product-card-two:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product-card-one img,
+.product-card-two img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card-two {
+    display: flex;
+    flex-direction: column;    height: 83vh;
+    color: #000000;
+    font-size: 1rem;
+    font-style: italic;
+}
+.add-to-cart-button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+}
