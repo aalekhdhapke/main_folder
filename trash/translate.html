@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Translation</title>
+</head>
+<body>
+  <h1 id="heading">DATA SCIENCE</h1>
+  <p id="paragraph">
+    Data science is an interdisciplinary field that uses scientific methods,
+    processes, algorithms, and systems to extract knowledge and insights from
+    data. It combines various fields like statistics, computer science, and
+    domain expertise to analyze and interpret data, ultimately helping
+    businesses make informed decisions. Data science is crucial for uncovering
+    hidden patterns, building predictive models, and developing actionable
+    strategies.
+  </p>
+
+  <select name="language" id="select-lang" onchange="translatelang()" >
+    <option value="english">English</option>
+    <option value="marathi">Marathi</option>
+    <option value="hindi">Hindi</option>
+    <option value="spanish">Spanish</option>
+  </select>
+
+  <!-- Language Files -->
+  <script src="./eng.js"></script>
+  <script src="./hind.js"></script>
+  <script src="./mar-deta.js"></script>
+  <script src="./spanish.js"></script>
+
+  <!-- Translation Logic -->
+  <script>
+    const translate = {
+      english: english,
+      marathi: marathi,
+      hindi: hindi,
+      spanish: spanish
+    };
+
+    function translatelang() {
+      const selectedlanguage = document.getElementById("select-lang").value;
+      const result = translate[selectedlanguage];
+      document.getElementById("heading").innerHTML = result.heading;
+      document.getElementById("paragraph").innerHTML = result.paragraph;
+      localStorage.setItem("language", selectedlanguage);
+    }
+
+    window.onload = function () {
+      let savedLanguage = localStorage.getItem("language") || "english";
+      document.getElementById("select-lang").value = savedLanguage;
+      translatelang();
+    };
+  </script>
+</body>
+</html>

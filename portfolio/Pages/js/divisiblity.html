@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divisibility Checker</title>
+    <style>
+      body {
+        background: linear-gradient(to right, #f06, #48c6ef);
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: white;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 1em;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        width: 250px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #f06;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+      }
+
+      button:hover {
+        background-color: #d04b79;
+      }
+
+      .output {
+        margin-top: 20px;
+        font-size: 1.2em;
+        color: lightyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Divisibility Checker</h1>
+      <input type="text" id="input" placeholder="Enter a number" />
+      <br />
+      <button onclick="number()">Check</button>
+      <p id="value"></p>
+    </div>
+
+    <script>
+      function number() {
+        const number = document.getElementById("input").value;
+        let output = "";
+
+        if (number % 3 === 0 && number % 5 === 0) {
+          output = "fizzbuzz";
+        } else if (number % 3 === 0) {
+          output = "fizz";
+        } else if (number % 5 === 0) {
+          output = "buzz";
+        } else {
+          output = number;
+        }
+
+        document.getElementById("value").innerHTML = output;
+      }
+    </script>
+  </body>
+</html>

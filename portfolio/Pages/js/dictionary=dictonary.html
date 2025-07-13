@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1 id="result"></h1>
+
+    <script>
+      const studentsdata = [
+        { name: "ashish", age: 20, marks: { html: 70, css: 80, js: 90 } },
+        { name: "suresh", age: 21, marks: { html: 60, css: 70, js: 80 } },
+        { name: "ramesh", age: 22, marks: { html: 50, css: 60, js: 70 } },
+      ];
+
+      let result = "";
+
+      for (let i = 0; i < studentsdata.length; i++) {
+        result += `Name is ${studentsdata[i].name} and HTML marks are ${studentsdata[i].marks.html}<br>`; // Concatenate student data and a line break.
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

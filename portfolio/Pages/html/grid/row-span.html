@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .grid-conatiner {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+    .box-one{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(152, 158, 160);
+        grid-row: 1 / span 3;
+    ;
+    }
+    .box-two{
+        height: 100%;
+        width: 100%;
+        background-color: lightgreen;
+    }
+    .box-three{
+        height: 100%;
+        width: 100%;
+        background-color: lightcoral;
+    }
+    .box-four{
+        height: 100%;
+        width: 100%;
+        background-color: lightgoldenrodyellow;
+        grid-row: 2 / span 2
+    ;
+    }
+    .box-five{
+        height: 100%;
+        width: 100%;
+        background-color: lightpink;
+    ;
+    }
+    .box-six{
+        height: 100%;
+        width: 100%;
+        background-color: lightcyan;
+        grid-row: 2 / span 2
+    ;
+    }
+    .box-seven{
+        height: 100%;
+        width: 100%;
+        background-color: lightseagreen;
+      
+    }
+    .box-eight{
+        height: 100%;
+        width: 100%;
+        background-color: lightblue;
+      
+    }
+    .box-nine{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(252, 117, 117, 0.207);
+        grid-column: 1 
+        / span 3;
+      
+    }
+</style>
+<body>  `
+    <div class="grid-conatiner">
+        <div class="box-one"></div>
+        <div class="box-two"></div>
+        <div class="box-three"></div>
+        <div class="box-four"></div>
+        <div class="box-five"></div>
+        <div class="box-six"></div>
+        <div class="box-seven"></div>
+        <div class="box-eight"></div>
+        <div class="box-nine"></div>
+    </div>
+</body>
+</html>

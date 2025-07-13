@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+<head>
+    <style>
+        .main {
+            height: 90vh;
+            width: 35vw;
+            background-color: #686D76;
+            display: grid;
+            padding: 11px;
+            grid-template-rows: 1fr 3fr;
+            border-style: double;
+            margin-left: 30%;
+            border-radius: 2%;
+            margin-top: 60px;
+        }
+
+        .second-box {
+            height: 80%;
+            width: 100%;
+            background-color: black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+
+        button {
+            height: 100%;
+            width: 100%;
+            padding: 0%;
+            font-size: 24px;
+            border-radius: 5px;
+
+
+
+        }
+
+        .last-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            height: 20%;
+            width: 100%;
+
+
+        }
+
+
+
+
+        .number {
+            background-color: grey;
+            color: #ffffff;
+        }
+
+        .signs {
+            background-color: #FF8911;
+            color: #fff;
+        }
+
+        .operator-top {
+            background-color: #464646;
+            color: #fff;
+        }
+
+        .top {
+            background-color: #686D76;
+            height: 15vw;
+            width: 35vw;
+
+            border-radius: 5px;
+            font-size: 33px;
+            text-align: center;
+
+        }
+
+        .number :hover {
+
+            background-color: lightblue;
+
+        }
+
+        .signs :hover {
+            background-color: lightblue;
+
+        }
+    </style>
+    <!-- a js -->
+    <script>
+        function buttonclick(ramu) {
+            document.getElementById("result-box").innerHTML = document.getElementById("result-box").innerHTML+ramu ;
+        }
+        function clearText() {
+            document.getElementById("result-box").innerHTML = "";
+        }
+       
+        function clearLast() {
+            const display = document.getElementById("result-box");
+            display.innerHTML = display.innerHTML.slice(0, -1);
+            currentInput = currentInput.slice(0, -1);
+        }
+        </script>
+</head>
+
+<body>
+    <!-- main html code and UI of calculator -->
+    <main class="main">
+
+        <div id="result-box" class="top"> </div>
+        </div>
+        <!-- calculator number and signs -->
+        <div style="height: 100%; width: 100%;">
+            <div class="second-box">
+                <div><button class="operator-top" onclick="clearText()">AC</button></div>
+                <div><button class="operator-top" onclick="clearLast()">⌫</button></div>
+                <div><button class="operator-top" onclick="percent('%')">%</button></div>
+                <div><button class="signs" onclick=" divide('÷') ">÷</button></div>
+                <div><button class="number" onclick="buttonclick(7)">7</button></div>
+                <div><button class="number" onclick="buttonclick(8)">8</button></div>
+                <div><button class="number" onclick="buttonclick(9)">9</button></div>
+                <div><button class="signs" onclick="buttonclick (x)">X</button></div>
+                <div><button class="number" onclick="buttonclick(4)">4</button></div>
+                <div><button class="number" onclick="buttonclick(5)">5</button></div>
+                <div><button class="number" onclick="buttonclick(6)">6</button></div>
+                <div><button class="signs" onclick=" minus('-') ">-</button></div>
+                <div><button class="number" onclick="buttonclick(1)">1</button></div>
+                <div><button class="number" onclick="buttonclick(2)">2</button></div>
+                <div><button class="number" onclick="buttonclick(3)">3</button></div>
+                <div><button class="signs">+</button></div>
+            </div>
+            <!-- lact row and butten of calculator -->
+            <div class="last-row">
+                <div><button class="number" onclick="buttonclick(0)">0</button></div>
+                <div><button class="number" onclick="dot('.') ">.</button></div>
+                <div><button class="signs" onclick="equal ('=')">=</button></div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

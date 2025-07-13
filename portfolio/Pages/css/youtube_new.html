@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Clone Watch Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #181818;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #202020;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      color: red;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar .search-bar {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      margin: 0 20px;
+    }
+
+    .navbar .search-bar input {
+      width: 100%;
+      max-width: 400px;
+      padding: 6px 10px;
+      background-color: #121212;
+      border: 1px solid #303030;
+      border-radius: 20px;
+      color: white;
+    }
+
+    .navbar .profile img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .main {
+      display: flex;
+      padding: 20px;
+    }
+
+    .video-section {
+      flex: 3;
+      margin-right: 20px;
+    }
+
+    .video-section iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+    }
+
+    .video-details {
+      margin-top: 10px;
+    }
+
+    .video-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .channel-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .channel-info .channel-name {
+      font-weight: bold;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .buttons button {
+      background-color: #303030;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons button:hover {
+      background-color: #505050;
+    }
+
+    .sidebar {
+      flex: 1.2;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .recommendation {
+      display: flex;
+      margin-bottom: 15px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      padding: 5px;
+      border-radius: 8px;
+    }
+
+    .recommendation:hover {
+      background-color: #2a2a2a;
+    }
+
+    .recommendation img {
+      width: 160px;
+      height: 90px;
+      object-fit: cover;
+      margin-right: 10px;
+      border-radius: 8px;
+    }
+
+    .rec-details {
+      font-size: 14px;
+    }
+
+    .rec-details strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">YouTube</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+    </div>
+    <div class="profile">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Icon">
+    </div>
+  </div>
+
+  <!-- Main Section -->
+  <div class="main">
+    <!-- Video Section -->
+    <div class="video-section">
+      <iframe src="https://www.youtube.com/embed/tbnzAVRZ9Xc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+
+      <div class="video-details">
+        <div class="video-title">WATCH THIS EVERYDAY AND CHANGE YOUR LIFE - Denzel Washington Motivational Speech</div>
+        <div class="channel-info">
+          <div class="channel-name">AlexKaltsMotivation ✔️</div>
+          <div class="buttons">
+            <button>👍 1.3M</button>
+            <button>Share</button>
+            <button>Download</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="recommendation">
+        <img src="https://i.ytimg.com/vi/2zX0t-P3jco/hqdefault.jpg" alt="thumb">
+        <div class="rec-details">
+          <strong>How Elon Musk Became World's Richest Man</strong>
+          <div>10M views · 1 year ago</div>
+        </div>
+      </div>
+
+      <div class="recommendation">
+        <img src="https://i.ytimg.com/vi/lFyE4DdDD6g/hqdefault.jpg" alt="thumb">
+        <div class="rec-details">
+          <strong>THINK ABOUT YOURSELF ALWAYS</strong>
+          <div>5M views · 2 years ago</div>
+        </div>
+      </div>
+
+      <div class="recommendation">
+        <img src="https://i.ytimg.com/vi/8IttGvFc3kQ/hqdefault.jpg" alt="thumb">
+        <div class="rec-details">
+          <strong>STOP WASTING YOUR LIFE</strong>
+          <div>3.2M views · 6 months ago</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

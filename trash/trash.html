@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aalekh Dhapke - Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: linear-gradient(to right, #1f3b4d, #66b2ff);
+        color: white;
+        font-family: "Roboto", sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      .logo {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 3rem;
+        background: rgba(0, 0, 0, 0.605);
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .nav-links li a:hover {
+        color: #a0e9ff;
+      }
+      .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 80px);
+        padding: 0 5%;
+      }
+
+      .home-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      .text-content {
+        max-width: 50%;
+      }
+
+      .text-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .text-content span {
+        color: #a0e9ff;
+      }
+
+      .text-content p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn {
+        text-decoration: none;
+        background-color: #256d85;
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 6px;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #3388aa;
+      }
+
+      .image-content {
+        max-width: 40%;
+      }
+
+      .image-box {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgb(48, 48, 48);
+        display: flex;
+        justify-content: center;
+      }
+
+      .image-box img {
+        max-width: 300px;
+        width: 100%;
+      }
+
+      /* About Section */
+      .container-one {
+        background: rgba(255, 255, 255, 0);
+        padding: 2rem;
+        border-radius: 3px;
+        box-shadow: 0 10px 30px rgb(48, 48, 48);
+        margin: 2rem auto;
+        max-width: 100vw;
+        text-align: center;
+      }
+
+      .container-one h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #a0e9ff;
+        font-style: italic;
+        font-variant: small-caps;
+      }
+
+      .about-text {
+        height: 60vh;
+        max-width: 30vw;
+        font-size: 1.3rem;
+        color: #d8f4fd;
+        font-style: italic;
+        font-variant: small-caps;
+        line-height: 1.6;
+        margin-top: 1rem;
+      }
+      .about-text a {
+        text-decoration: none;
+        color: #a0e9ff; /* Optional: Matches theme */
+      }
+      .about-img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px 18px rgba(211, 211, 211, 0.137);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-top: -2120%;
+      }
+
+      .about-img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(160, 233, 255, 0.7);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Aalekh_Dhapke</div>
+        <ul class="nav-links">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <br />
+    <section class="home" id="top">
+      <div class="home-content">
+        <div class="image-content">
+          <div class="image-box">
+            <img
+              src="./portfolio/assets/images/prtfolioimg Background Removed.png"
+              alt="Portrait of Aalekh Dhapke"
+            />
+          </div>
+        </div>
+        <div class="text-content">
+          <h1>Hi, I'm <span>Aalekh Dhapke</span></h1>
+          <p>I'm a Full Stack Developer</p>
+          <div class="buttons">
+            <a href="#contact" class="btn">Contact Me</a>
+            <a
+              style="text-decoration: none"
+              href="./portfolio/resume.html"
+              class="btn"
+              target="_blank"
+              >Resume</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container-one">
+        <h2>About Me</h2>
+        <div class="about-text">
+          <p>
+            <strong style="font-size: 30px"> I am Aalekh Dhapke</strong><br />
+            a programmer with a passion for learning and exploring new
+            technologies. I have a strong background in Frontend Development and
+            improving full-stack development and am always eager to expand my
+            skill set . As a dedicated and driven individual, I am constantly
+            seeking opportunities to grow and improve as a programmer.
+          </p>
+          <br />
+          <h4>📞 : <a href="tel:8308860979">+91 83088 60979</a></h4>
+          <h4>
+            ✉️ :
+            <a href="mailto:aalekhdhapke@gmail.com">aalekhdhapke@gmail.com</a>
+          </h4>
+          <h4>📍 : <a href=" ">Charde lay-out Dhantoli Katol</a></h4>
+        </div>
+        <img
+          class="about-img"
+          src="../Alekh/portfolio/assets/images/circular-photoaidcom-cropped.JPG"
+          alt="Aalekh Dhapke"
+        />
+      </div>
+    </section>
+  </body>
+</html>

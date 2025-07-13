@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+        height: 100vh;
+        width: 100vw;
+      display: grid;
+      margin: 0;
+      grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "aside main main main"
+        "aside section section section"
+        "div article article div-two"
+        "footer footer footer footer";
+        ;
+    }
+    header {
+      grid-area: header;
+      background-color: lightblue;
+    
+    }
+    nav {
+      grid-area: nav;
+      background-color: lightgreen;
+      width: 100%;
+    }
+    aside {
+      grid-area: aside;
+      background-color: lightcoral;
+    
+    }
+    main {
+      grid-area: main;
+      background-color: lightgoldenrodyellow;
+    
+    }
+    footer {
+      grid-area: footer;
+      background-color: lightgray;
+   
+    }
+    section {
+      grid-area: section;
+      background-color: lightpink;
+    
+    }
+    article {
+      grid-area: article;
+      background-color: lightcyan;
+    
+    }
+    .box{
+        grid-area: div-two;
+        background-color: lightseagreen;
+
+    }
+    div {
+      grid-area: div;
+      background-color: lightyellow;
+    
+    }
+  </style>
+  <body>
+    <header>header</header> 
+    <nav>nav</nav>
+    <aside> aside </aside>
+    <main> main </main>
+    <section> section </section>
+    <div> div </div>
+    <article> article </article>
+    <div class="box"> div_box </div>
+    <footer> footer </footer>
+  </body>
+</html>

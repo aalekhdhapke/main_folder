@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(212, 254, 254);
+    }
+    .main {
+        height: 72vh;
+        width: 40vw;
+        background-color: bisque;
+        border-radius: 4%;
+        margin-left: 27%;
+        margin-top: 6%;
+    }
+    .display {
+        height: 18vh;
+        width: 36vw;
+        background-color: rgb(193, 190, 190);
+        border-radius: 2%;
+        margin-left: 5%;
+        color: black;
+        font-size: large;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    input {
+        height: 10%;
+        background-color: lightblue;
+    }
+    .gender {
+        margin-left: 35%;
+    }
+    .age {
+        margin-left: 35%;
+    }
+    .submit {
+        height: 5vh;
+        width: 10vw;
+        background-color: aquamarine;
+        font-size: large;
+        margin-left: 35%;
+        margin-top: 10%;
+    }
+</style>
+<script>
+    function hello() {
+        const age = parseInt(document.getElementById("inputOne").value);
+        const gender = document.getElementById("inputTwo").value.toLowerCase();
+
+        let message = "Good morning";
+
+        if (gender === "male") {
+            if (age < 25) {
+                message += " bro!";
+            } else {
+                message += " sir!";
+            }
+        } else {
+            message = "Good morning!";
+        }
+        if ( gender === "female"){
+            if (age < 25) {
+                message += " sister! ";
+                } else {
+                    message += " mam!";
+                    }
+        }
+
+
+        document.getElementById("display").innerText = message;
+    }
+</script>
+<body>
+    <div class="main">
+        <div class="display" id="display"></div>
+        <br>
+        <div class="age">
+            <h2>Age</h2>
+            <input type="number" id="inputOne">
+        </div>
+        <br>
+        <div class="gender">
+            <h2>Gender</h2>
+            <input type="text" id="inputTwo" placeholder="male or female">
+        </div>
+        <button class="submit" onclick="hello()">Submit</button>
+    </div>
+</body>
+</html>

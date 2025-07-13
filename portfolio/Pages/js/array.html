@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #8e2de2, #f441a5);
+    }
+    .login-container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      padding: 20px 30px;
+      text-align: center;
+    }
+    .login-container h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .login-container label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      color: #555;
+    }
+    .login-container input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      outline: none;
+    }
+    .login-container input:focus,
+    .login-container textarea:focus {
+      border-color: #8e2de2;
+    }
+    .login-container .btn {
+      background: linear-gradient(to right, #8e2de2, #f441a5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .login-container .btn:hover {
+      background: linear-gradient(to right, #6a11cb, #f441a5);
+    }
+    textarea {
+      font-size: 16px;
+      resize: none;
+    }
+  </style>
+
+  <script>
+    let nameArray = [];
+
+    function addName(event) {
+      event.preventDefault(); // Prevent form refresh
+
+      let nameInput = document.getElementById("adaynumber").value.trim();
+      if (nameInput !== "") {
+        nameArray.push(nameInput); // Add to array
+        document.getElementById("Dayis").value = nameArray.join(", "); // Show in textarea
+        document.getElementById("adaynumber").value = ""; // Clear input
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="login-container">
+    <h1>Name Array</h1>
+    <form onsubmit="addName(event)">
+      <textarea id="Dayis" rows="5" readonly></textarea>
+      <input type="text" id="adaynumber" placeholder="Enter your name" required/>
+      <button class="btn" id="login">Enter</button>
+    </form>
+  </div>
+</body>                 
+</html>
+
+ <!-- <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Show Array as Code</title>
+ </head>
+ <body>
+   <h2>Name Array</h2>
+   <input type="text" id="name" placeholder="Enter name">
+   <button onclick="add()">Add</button>
+ 
+   <pre id="codeOutput">[]</pre> <!-- shows the array like code -->
+ 
+   <!-- <script>
+     let names = [];
+     function add() {
+       let input = document.getElementById("name").value;
+       if (input) {
+         names.push(input);
+         document.getElementById("codeOutput").textContent = JSON.stringify(names, null, 2);
+         document.getElementById("name").value = "";
+       }
+     }
+   </script>
+ </body>
+ </html>
+  --> 
+  <!-- <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Simple Name Array</title>
+  </head>
+  <body>
+    <h2>Name Array</h2>
+    <input type="text" id="name" placeholder="Enter name">
+    <button onclick="add()">Add</button>
+  
+    <pre id="output">[]</pre>
+  
+    <script>
+      var names = [];
+  
+      function add() {
+        var n = document.getElementById("name").value;
+        if (n) {
+          names.push(n);
+          var result = "[";
+          for (var i = 0; i < names.length; i++) {
+            result += '"' + names[i] + '"';
+            if (i < names.length - 1) {
+              result += ", ";
+            }
+          }
+          result += "]";
+          document.getElementById("output").textContent = result;
+          document.getElementById("name").value = "";
+        }
+      }
+    </script>
+  </body>
+  </html>
+   -->

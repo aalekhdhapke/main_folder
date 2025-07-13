@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    <style>
+      /* input */
+      .input {
+        width: 100%;
+        max-width: 270px;
+        height: 60px;
+        padding: 12px;
+        font-size: 18px;
+        font-family: "Courier New", monospace;
+        color: #000;
+        background-color: #fff;
+        border: 4px solid #000;
+        border-radius: 0;
+        outline: none;
+        transition: all 0.3s ease;
+        box-shadow: 8px 8px 0 #000;
+      }
+
+      .input::placeholder {
+        color: #888;
+      }
+
+      .input:hover {
+        transform: translate(-4px, -4px);
+        box-shadow: 12px 12px 0 #000;
+      }
+
+      .input:focus {
+        background-color: #000;
+        color: #fff;
+        border-color: #ffffff;
+      }
+
+      .input:focus::placeholder {
+        color: #fff;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      .input:focus::after {
+        content: "|";
+        position: absolute;
+        right: 10px;
+        animation: blink 0.7s step-end infinite;
+      }
+
+      .input:valid {
+        animation: typing 2s steps(30, end);
+      }
+      .input-container {
+        position: relative;
+        width: 100%;
+        max-width: 270px;
+      }
+
+      .input {
+        width: 100%;
+        height: 60px;
+        padding: 12px;
+        font-size: 18px;
+        font-family: "Courier New", monospace;
+        color: #000;
+        background-color: #fff;
+        border: 4px solid #000;
+        border-radius: 0;
+        outline: none;
+        transition: all 0.3s ease;
+        box-shadow: 8px 8px 0 #000;
+      }
+
+      .input::placeholder {
+        color: #888;
+      }
+
+      .input:hover {
+        transform: translate(-4px, -4px);
+        box-shadow: 12px 12px 0 #000;
+      }
+
+      .input:focus {
+        background-color: #010101;
+        color: #fff;
+        border-color: #d6d9dd;
+      }
+
+      .input:focus::placeholder {
+        color: #fff;
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-5px) rotate(-5deg);
+        }
+        50% {
+          transform: translateX(5px) rotate(5deg);
+        }
+        75% {
+          transform: translateX(-5px) rotate(-5deg);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .input:focus {
+        animation: shake 0.5s ease-in-out;
+      }
+
+      @keyframes glitch {
+        0% {
+          transform: none;
+          opacity: 1;
+        }
+        7% {
+          transform: skew(-0.5deg, -0.9deg);
+          opacity: 0.75;
+        }
+        10% {
+          transform: none;
+          opacity: 1;
+        }
+        27% {
+          transform: none;
+          opacity: 1;
+        }
+        30% {
+          transform: skew(0.8deg, -0.1deg);
+          opacity: 0.75;
+        }
+        35% {
+          transform: none;
+          opacity: 1;
+        }
+        52% {
+          transform: none;
+          opacity: 1;
+        }
+        55% {
+          transform: skew(-1deg, 0.2deg);
+          opacity: 0.75;
+        }
+        50% {
+          transform: none;
+          opacity: 1;
+        }
+        72% {
+          transform: none;
+          opacity: 1;
+        }
+        75% {
+          transform: skew(0.4deg, 1deg);
+          opacity: 0.75;
+        }
+        80% {
+          transform: none;
+          opacity: 1;
+        }
+        100% {
+          transform: none;
+          opacity: 1;
+        }
+      }
+
+      .input:not(:placeholder-shown) {
+        animation: glitch 1s linear infinite;
+      }
+
+      .input-container::after {
+        content: "|";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #000;
+        animation: blink 0.7s step-end infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .input:focus + .input-container::after {
+        color: #fff;
+      }
+
+      .input:not(:placeholder-shown) {
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 0px 0px 0 #000;
+      }
+
+      /* input over */
+      body {
+        background-image: url(./assets/game.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .main {
+        height: 97.5vh;
+        width: 50vw;
+        margin-left: 25%;
+        background-color: #ff0000;
+        border-radius: 20px;
+        margin-top: 5%;
+      }
+      /* button */
+      button {
+        width: 20vw;
+        margin-left: 40%;
+        padding: 0.9em 1.8em;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 4px;
+        color: transparent;
+        border: 3px solid #ff0;
+        font-size: 14px;
+        position: relative;
+        font-family: inherit;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      button::before {
+        content: "button";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #363636;
+        color: #ff0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+      }
+
+      button:hover::before {
+        left: 100%;
+        transform: scale(0) rotateY(360deg);
+        opacity: 0;
+      }
+
+      button::after {
+        content: "button";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #363636;
+        color: #ff0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        transform: scale(0) rotateY(0deg);
+        opacity: 0;
+      }
+
+      button:hover::after {
+        left: 0;
+        transform: scale(1) rotateY(360deg);
+        opacity: 1;
+      }
+
+      /* username */
+      .input {
+        height: 40px;
+        width: 49vw;
+        font-size: 140%;
+        margin-top: 60%;
+        font-style: italic;
+        border-radius: 8px;
+        border: 2px solid hsl(236, 92%, 66%);
+        outline: none;
+        transition: 200ms ease-in;
+        padding-left: 1rem;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      .input:focus {
+        border-bottom: 4px solid hsl(236, 92%, 66%);
+        padding-top: 2px;
+        color: lightslategray;
+      }
+
+      .input::placeholder {
+        color: hsl(236, 92%, 66%);
+        opacity: 0.5;
+      }
+      /* over */
+
+      .username {
+        padding-top: 10%;
+      }
+      .display {
+        font-size: 120%;
+
+        border-radius: 20px;
+        background-color: bisque;
+        color: #363636;
+        height: 70vh;
+        width: 50vw;
+        margin-bottom: -59%;
+        text-align: center;
+        font-size: 30px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+    </style>
+    <script>
+      function compare() {
+        let name = document.getElementById("inputOne").value.toLowerCase();
+
+        if (name == "alekh") {
+          document.getElementById("display-box").innerText =
+            "   Aalekh Dhapke      Studying IN CLASS : 8      Address: At Dhantoli katol  ";
+        } else if (name == "atharv") {
+          document.getElementById("display-box").innerText =
+            " unconventional hairstyles and bright clothing someone who is considered to be uncool or someone who behaves in a reckless or uncultured manner  chalu 1 no ka  They have a boring/basic personality and are frequently cringy . They can also be aggressive (these are dangerous types). They live their lives in order to appear cool, and they have no real ambitions in life other than to get a lover or girlfriend so that they can feel accomplished.";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <br />
+    <br />
+
+    <div class="main">
+      <!-- display -->
+      <div class="display" id="display-box"></div>
+      <!-- username -->
+      <input
+        class="input"
+        name="text"
+        type="text"
+        id="inputOne"
+        placeholder="Enter Your Name"
+      />
+      <br />
+
+      <!-- button -->
+      <br />
+      <br />
+      <br />
+
+      <button onclick="compare()">button</button>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </body>
+</html>

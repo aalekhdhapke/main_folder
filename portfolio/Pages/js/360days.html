@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title> 354 days</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    .container {
+      text-align: center;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .div2 {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      text-align: left;
+      background-color: #e9ecef;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 14px;
+      height: 300px;
+      overflow-y: auto;
+    }
+  </style>
+  <script>
+    function days() {
+      let output = "";
+      let month = 12;
+
+      while (month <= 12) { 
+        output += `Month: ${month}\n`;
+        let day = 1;
+
+        while (day <= 1) { 
+          output += `  Day: ${day}\n`;
+          let hours = 0;
+
+          while (hours < 1) { 
+            output += `    Hour: ${hours}\n`;
+            let minutes = 0;
+
+            while (minutes < 60) {
+              output += `      Minute: ${minutes}\n`;
+              let seconds = 0;
+
+              while (seconds < 60) {
+                output += `        Second: ${seconds}\n`;
+                seconds++;
+              }
+              minutes++;
+            }
+            hours++;
+          }
+          day++;
+        }
+        month++;
+      }
+
+      document.getElementById('output').textContent = output; 
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Time Display</h1>
+    <p>Click the button to generate days, hours, minutes, and seconds data:</p>
+    <button onclick="days()">Click it</button>
+    <div class="div2" id="output"></div>
+  </div>
+</body>
+</html>

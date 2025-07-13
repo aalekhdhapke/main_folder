@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .main {
+        height: 85vh;
+        width: 50vw;
+        background-color: rebeccapurple;
+        font-size: 30px;
+        border-radius: 34px;
+        margin-left: 23%;
+      }
+      .display {
+        height: 30vh;
+        width: 49vw;
+        background-color: rgb(74, 166, 161);
+        text-align: center;
+        font-size: 30px;
+        border-radius: 34px;
+        color: #000000;
+      }
+      input {
+        text-align: center;
+        height: 10vh;
+        width: 49vw;
+        background-color: lightcoral;
+        border-radius: 34px;
+        font-size: 30px;
+      }
+      button {
+        height: 7vh;
+        width: 19vw;
+        border-radius: 34px;
+        font-size: 30px;
+        background-color: lightgrey;
+      }
+     .buttono {
+        height: 7vh;
+        width: 38vw;
+        border-radius: 34px;
+        font-size: 30px;
+        background-color: lightgrey;
+      }
+    </style>
+    <script>
+        function ternery(){
+            let age = 20; 
+let eligibility = (age >= 18) ? "Eligible to vote" : "Not eligible to vote";
+console.log(eligibility);
+                             }
+    </script>
+
+  </head>
+  <body>
+    <div class="main">
+      <div id="display" class="display"></div>
+      <br />
+
+      <input type="text" id="inputOne" class="ten" />
+      <br />
+
+      <input type="text" id="inputTwo" class="twenty" />
+      <br />
+      
+      <br />
+
+     
+      <button><div class="buttono" onclick="ternery()">compare</div></button>
+      
+    </div>
+  </body>
+</html>

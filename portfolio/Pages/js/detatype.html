@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main-cointainer {
+            background-color: lightslategray;
+            height: 70vh;
+            width: 40vw;
+            margin-left: 400px;
+            border: dimgrey;
+            font-style: italic;
+            border-radius: 20px;
+        }
+
+        .top {
+            background-color: lightpink;
+            height: 30vh;
+            border-radius: 20px;
+            font-size: 40px;
+            font-style: italic;
+            text-align: center;
+        }
+        .ten{
+            background-color: lightblue;
+            height: 10vh;
+            width: 20vw;
+          color: blue;
+          font-size: 34px;
+          text-align: center;
+          margin-left: 20%;
+        }
+        .twenty{
+            background-color: lightblue;
+            height: 10vh;
+            width: 20vw;
+          color: blue;
+          font-size: 34px;
+          text-align: center;
+          margin-left: 20%;
+        }
+        .result{
+            background-color: lightblue;
+            height: 10vh;
+            width: 10vw;
+          color: blue;
+          font-size: 34px;
+         
+         
+        }
+    </style>
+    <script>
+ 
+
+        function compare() {
+
+            let a = document.getElementById("inputOne").value
+            let b = document.getElementById("inputTwo").value
+
+            if (a > b ) {
+                
+                document.getElementById("display").innerHTML = "a is bigger"
+            }
+            else if(b >a){
+                document.getElementById("display").innerHTML =  " b is bigger"
+
+        }
+    }
+
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <div class="main-cointainer">
+        <div id="display" class="top"></div>
+      
+        <input type="text" id="inputOne" class="ten">
+       <br>
+   <input type="text" id="inputTwo"  class="twenty">
+       <br>
+     <button style="margin-left: 32%;">  <div class="result" onclick="compare()">RESULT</div></button>
+    </div>
+
+</body>
+
+</html>

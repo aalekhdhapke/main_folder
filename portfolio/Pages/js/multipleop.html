@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>operators</title>
+
+    <script>
+      function getInputs() {
+        const a = parseFloat(document.getElementById("inputOne").value);
+        const b = parseFloat(document.getElementById("inputTwo").value);
+        return { a, b };
+      }
+      function modolus() {
+        const { a, b } = getInputs();
+        document.getElementById("display").innerText = a % b;
+      }
+
+      function addition() {
+        const { a, b } = getInputs();
+        document.getElementById("display").innerText = a + b;
+      }
+
+      function subtract() {
+        const { a, b } = getInputs();
+        document.getElementById("display").innerText = a - b;
+      }
+
+      function multiply() {
+        const { a, b } = getInputs();
+        document.getElementById("display").innerText = a * b;
+      }
+
+      function division() {
+        const { a, b } = getInputs();
+        document.getElementById("display").innerText = a / b;
+      }
+
+      function compare() {
+        const { a, b } = getInputs();
+        if (a > b) {
+          document.getElementById("display").innerText =
+            "First number is bigger";
+        } else if (b > a) {
+          document.getElementById("display").innerText =
+            "Second number is bigger";
+        } else {
+          document.getElementById("display").innerText =
+            "Both numbers are equal";
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f0f2f5;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .main {
+        background-color: rebeccapurple;
+        border-radius: 20px;
+        padding: 30px;
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .display {
+        background-color: rgb(74, 166, 161);
+        color: black;
+        text-align: center;
+        font-size: 24px;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        min-height: 50px;
+      }
+
+      input {
+        width: 92.5%;
+        padding: 15px;
+        font-size: 18px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 15px;
+        background-color: lightcoral;
+        text-align: center;
+      }
+
+      button {
+        width: 48%;
+        padding: 15px;
+        font-size: 18px;
+        margin: 8px 1%;
+        border: none;
+        border-radius: 15px;
+        background-color: lightgrey;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #d1d1d1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div id="display" class="display">0</div>
+
+      <input type="number" id="inputOne" placeholder="Enter first number" />
+      <input type="number" id="inputTwo" placeholder="Enter second number" />
+
+      <div
+        style="display: flex; flex-wrap: wrap; justify-content: space-between"
+      >
+        <button onclick="addition()">Addition</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="division()">Divide</button>
+        <button onclick="compare()">Compare</button>
+        <button onclick="modolus()">Modolus</button>
+      </div>
+    </div>
+  </body>
+</html>

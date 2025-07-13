@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function displayFullName() {
+      const firstName = document.getElementById("first_name").value;
+      const lastName = document.getElementById("last_name").value;
+      const fullName = firstName + " " + lastName;
+      document.getElementById("full_name").innerText =
+        "Full Name: " + fullName;
+        console.log("Full Name: " + fullName);
+      alert("Full Name: " + fullName);
+    }
+  </script>
+
+<style>
+    body {
+      display: flex;
+      justify-content: center;
+             align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .main {
+      text-align: center;
+      display: grid;
+      background-color: lightblue;
+      height: 40vh;
+      border-radius: 10px;
+    }
+    input {
+      margin: 5px;
+    }
+  
+  </style>
+  <body>
+    <div class="main">
+      <input
+        type="text"
+        id="first_name"
+        placeholder="Enter your first name"
+        style="
+          width: 300px;
+          padding: 10px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        "
+      />
+      <input
+        type="text"
+        id="last_name"
+        placeholder="Enter your last name"
+        style="
+          width: 300px;
+          padding: 10px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          margin-left: 10px;
+        "
+      />
+      <button
+        onclick="displayFullName()"
+        style="
+          padding: 10px 20px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: none;
+          background-color: #4caf50;
+          color: white;
+          cursor: pointer;
+          margin-left: 10px;
+        "
+      >
+        Display Full Name
+      </button>
+      <p
+        id="full_name"
+        style="margin-top: 20px; font-size: 18px; color: #333"
+      ></p>
+      
+    </div>
+  </body>
+</html>

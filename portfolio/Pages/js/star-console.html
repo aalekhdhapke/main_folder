@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+     function whileLoop() {
+    let incrementstar = 1; 
+    let decrementstar = 4;
+
+    while (incrementstar <= 5) { 
+        let output = ""; 
+        let allstar = 1; 
+
+        while (allstar <= incrementstar) { 
+            output += "*"; 
+            allstar++; 
+        }
+
+        console.log(output); 
+        incrementstar++; 
+    }
+    while (decrementstar >= 1) { 
+        let output = ""; 
+        let allstar = 1; 
+
+        while (allstar <= decrementstar) { 
+            output += "*"; 
+            allstar++; 
+        }
+
+        console.log(output); 
+        decrementstar --; 
+    }
+    console.log("Program End")
+}
+
+
+</script>
+<body>
+    <button onclick="whileLoop()" >click</button>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Pattern</title>
+    <style>
+body {
+        white-space: pre;
+      }
+      
+    </style>
+    <script>
+      function Numbers() {
+        const num = (document.getElementById("input").value);
+        
+        document.getElementById("display").innerHTML = "";
+
+      
+
+        for (let i = 1; i <= num; i++) {
+          let row = "";
+          for (let j = 1; j <= i; j++) {
+
+            row += "*";
+          }
+          document.getElementById("display").innerHTML += row + "<br>";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="input" placeholder="Enter a number" />
+    <br>
+    <button onclick="Numbers()">Generate Pattern</button>
+    <br>
+    <div id="display"></div>
+
+    
+  </body>
+</html>

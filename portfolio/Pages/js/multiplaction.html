@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .container {
+            background-color: rgb(255, 255, 255);
+            height: 70vh;
+            width: 40vw;
+            border-radius: 20px;
+            border-style: solid;
+            margin-top: 10vh;
+            margin-left: 25vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-style: italic;
+            font-size: 40px;
+        }
+
+        .number {
+            background-color: green;
+            color: white;
+            width: 100%;
+        }
+
+        button {
+            height: 44px;
+            width: 100%;
+            cursor: pointer;
+            border: none;
+            font-size: 1vw;
+        }
+
+        button:hover {
+            background-color: gray;
+        }
+
+        button:active {
+            background-color: grey;
+        }
+
+        .orange {
+            background-color: orange;
+            color: rgb(255, 255, 255);
+            border: none;
+        }
+
+        .number-keys {
+            background-color: #2a2a2a;
+
+            color: rgb(255, 255, 255);
+            background-color: #454545;
+            border: none;
+        }
+
+        textarea {
+            resize: none;
+            scroll-behavior: smooth;
+            
+
+        }
+
+        textarea::-webkit-scrollbar {
+            opacity: 1;
+            width: 5px;
+            background-color: white;
+        }
+
+        #display-box {
+            background-color: black;
+            height: 30%;
+            width: 96%;
+            text-align: right;
+            padding-left: 1vw;
+            outline: none;
+            border: none;
+            color: white;
+            font-size: 2vw;
+            font-size: 32px;
+            border-radius: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .submit-button-one {
+            width: 80%;
+            margin: 10%;
+        }
+        
+    </style>
+    <!-- script -->
+    <script>
+        function relationOperator() {
+            let x =  document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+
+            let z =  Number(x) * Number(y);
+            document.getElementById("display-box").innerHTML = (z);
+        }
+
+
+    </script>
+</head>
+
+<body style="background-color: lightgray">
+    <!-- background -->
+    <div class="container">
+        <!-- result box -->
+        <textarea id="display-box" type="text" readonly></textarea>
+        <input id="input-one" type="text" style="width: 98%; height: 44px; font-size: 24px  " />
+        <br>
+        <!--  -->
+        <input id="input-two" type="text" style="width: 98%; height: 44px; font-size: 24px " />
+
+        <!-- button -->
+        <div class="submit-button-one">
+            <button class="number" onclick="relationOperator()" value="INPUT OUTPUT">
+                INPUT OUTPUT
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
