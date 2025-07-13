@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    h1 {
+      color: blue;
+    }
+    a {
+      color: green;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    body {
+      background-color: #f0f0f0;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      color: #333;
+      margin-top: 20px;
+      font-size: 18px;
+      background-color: aqua;
+    }
+
+  </style>
+  <body>
+    <script>
+      async function onefunction() {
+        const dict = {
+          method: "GET",
+        };
+
+        let response = await fetch("http://127.0.0.1:3000/ayush", dict);
+                let result = await response.text();
+
+        document.getElementById("result").innerText = result;
+      }
+      async function twofunction(){
+       const dict = {
+          method: "GET",
+        };
+        let response = await fetch("http://127.0.0.1:3000/alekh", dict);
+                let result = await response.text();
+
+        document.getElementById("result").innerText = result;
+
+      }
+    </script>
+    <h1>frontend</h1>
+    <h2 id="result"></h2>
+    <a href=" http://127.0.0.1:3000/alekh">alekh</a>
+    or <a href="http://127.0.0.1:3000/ayush">ayush</a>
+    <button id="myButton-one" onclick="twofunction()" >alekh</button>
+        <button id="myButton-one" onclick="onefunction()" >ayush</button>
+
+  </body>
+</html>

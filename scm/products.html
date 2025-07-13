@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /*Main container css*/
+        .main-container {
+            width: 100%;
+            height: auto;
+            background-color: lightgray;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            row-gap: 20px;
+            column-gap: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /*Product Grid Title css*/
+        .product {
+            width: 100%;
+            height: 60px;
+            background-color: lightslategray;
+            grid-column: 1/span 3;
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+            padding-top: 15px;
+
+        }
+
+        /*Product card css*/
+        .box {
+            width: 100%;
+            height: 400px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!--Product Grid Title-->
+    <div class="product">Product Grid</div>
+
+    <!--Main container-->
+    <div class="main-container">
+
+        <!--Product card-->
+
+        <!--Product one-->
+        <div class="box">
+            <img src="../assets/images/headphone.jpg" width="250px">
+            <h3>Headphone</h3>
+            <h4>₹1,499</h4>
+            <p>ZEBRONICS Havoc Premium Gaming Over Ear Headphone with Dolby Atmos Subscription(Black)</p>
+        </div>
+
+        <!--Product two-->
+        <div class="box">
+            <img src="../assets/images/keyboard.jpg" width="250px">
+            <h3>Keyboard</h3>
+            <h4>₹929</h4>
+            <p>ZEBRONICS Companion 203, 2.4GHz Wireless Keyboard & Mouse Combo (Black)</p>
+        </div>
+
+        <!--Product three-->
+        <div class="box">
+            <img src="../assets/images/mouce.jpg" width="250px">
+            <h3>Wireless Gaming Mouse</h3>
+            <h4>₹2,799</h4>
+            <p>Kreo Anzu Ultralight Ergonomic Wireless Gaming Mouse for PC</p>
+        </div>
+
+        <!--Product four-->
+        <div class="box">
+            <img src="../assets/images/laptop-stand.jpg" width="250px">
+            <h3>Laptop/Desktop Stand</h3>
+            <h4>₹349</h4>
+            <p>Dyazo 6 Angles Adjustable Aluminum Ergonomic Portable Laptop/Desktop Riser Stand (Silver)</p>
+        </div>
+
+        <!--Product five-->
+        <div class="box">
+            <img src="../assets/images/moniter-screen-light-bar.jpg" width="250px">
+            <h3>Monitor Screen Light Bar</h3>
+            <h4>₹1,699</h4>
+            <p>Techzere Plastic 13-Inch Laptop Monitor Screen Light Bar With Smart Touch Sensor</p>
+        </div>
+
+        <!--Product six-->
+        <div class="box">
+            <img src="../assets/images/bluetooth-speaker.jpg" width="250px">
+            <h3>Bluetooth Speaker</h3>
+            <h4>₹1,599</h4>
+            <p>boAt Stone 352 Pro Bluetooth Speaker w/ 14W Signature Sound</p>
+        </div>
+
+        <!--Product seven-->
+        <div class="box">
+            <img src="../assets/images/smartwatch.jpg" width="250px">
+            <h3>Smart Watch</h3>
+            <h4>₹1,299</h4>
+            <p>Fire-Boltt Ninja Call Pro Max Smart Watch </p>
+        </div>
+
+        <!--Product eight-->
+        <div class="box">
+            <img src="../assets/images/cctv-camera.jpg" width="250px">
+            <h3>CCTV Camera</h3>
+            <h4>₹1,499</h4>
+            <p>CP PLUS 3 MP Full HD Smart Wi-fi CCTV Camera</p>
+        </div>
+
+        <!--Product nine-->
+        <div class="box">
+            <img src="../assets/images/ipad-pencil.jpg" width="250px">
+            <h3>iPad Pencil</h3>
+            <h4>₹1,426</h4>
+            <p>DIGIROOT iPad Pencil【NO.1 Sales in US&EU】</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

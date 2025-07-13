@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Frontend</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    a {
+      color: green;
+      text-decoration: none;
+      font-size: 20px;
+      margin: 0 10px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #result {
+      color: #333;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Frontend</h1>
+
+  <a href="http://127.0.0.1:3000/alekh" target="_blank">Alekh (Direct)</a> or
+  <a href="http://127.0.0.1:3000/ayush" target="_blank">Ayush (Direct)</a>
+
+  <div>
+    <button onclick="fetchAlekh()">Fetch Alekh</button>
+    <button onclick="fetchAyush()">Fetch Ayush</button>
+  </div>
+
+  <h2 id="result">Result will appear here</h2>
+
+  <script>
+    async function fetchAlekh() {
+      try {
+        const response = await fetch("http://127.0.0.1:3000/alekh", {
+          method: "POST",
+        });
+        const result = await response.text();
+        document.getElementById("result").innerText = result;
+      } catch (error) {
+        document.getElementById("result").innerText = "Error: " + error.message;
+      }
+    }
+
+    async function fetchAyush() {
+      try {
+        const response = await fetch("http://127.0.0.1:3000/ayush", {
+          method: "POST",
+        });
+        const result = await response.text();
+        document.getElementById("result").innerText = result;
+      } catch (error) {
+        document.getElementById("result").innerText = "Error: " + error.message;
+      }
+    }
+  </script>
+</body>
+</html>

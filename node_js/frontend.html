@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      margin-top: 20%;
+text-align: center;      
+    }
+    .message {
+      background-color: aqua;
+      color: black;
+      height: 20vh;
+      width: 20vw;
+      border-radius: 20px;
+margin-left: 30%;    }
+  </style>
+  <body>
+    <div class="container">
+      <input type="text" id="input" />
+      <div class="buttons">
+        <button onclick="postmessage()">Send</button>
+        <button onclick="getmessage()">Get</button>
+      </div>
+    </div>
+    <div>
+      <div class="message" id="message"></div>
+    </div>
+    <script>
+      let messageArray = []
+      async function postmessage (){
+         const data = JSON.straingify({message:document.getElementById('message')})
+         let Headersbody = {
+          method:" post",
+          headers:{
+              "content-type":"application/json",
+          }
+      }
+         const response = await fetch ("http://127.0.0.1:3000\post-message",Headersbody)
+         document.getElementById('message').value = "";
+      }
+      async function getmessage (){
+          let Headersbody = {
+          method:" post",
+        
+          headers:{
+              "content-type":"application/json",
+          }
+        
+      }
+      const response = await fetch("http://127.0.0.1:3000\get-message",Headersbody)
+      const data = await response.text();
+      console.log(data)
+          document.getElementById ("message").innerHTML += data;
+
+      }
+    </script>
+  </body>
+</html>
