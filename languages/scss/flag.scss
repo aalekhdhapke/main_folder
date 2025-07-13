@@ -1,0 +1,33 @@
+// Variables
+$background-color: #f4f4f4;
+$orange-color: #FF671F;
+$white-color: #FFFFFF;
+$green-color: #046A38;
+$box-height: 100px;
+$box-width: 600px;
+$img-margin-left: 180px;
+
+body {
+  background-color: $background-color;
+}
+
+.orange, .white, .green {
+  height: $box-height;
+  width: $box-width;
+}
+
+.orange {
+  background-color: $orange-color;
+}
+
+.white {
+  background-color: $white-color;
+}
+
+.green {
+  background-color: $green-color;
+}
+
+img {
+  margin-left: $img-margin-left;
+}

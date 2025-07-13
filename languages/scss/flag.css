@@ -1,0 +1,26 @@
+body {
+  background-color: #f4f4f4;
+}
+
+.orange, .white, .green {
+  height: 100px;
+  width: 600px;
+}
+
+.orange {
+  background-color: #FF671F;
+}
+
+.white {
+  background-color: #FFFFFF;
+}
+
+.green {
+  background-color: #046A38;
+}
+
+img {
+  margin-left: 180px;
+}
+
+/*# sourceMappingURL=flag.css.map */

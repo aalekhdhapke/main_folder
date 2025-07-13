@@ -1,0 +1,187 @@
+// Variables
+$background-color-light: #e0e0e0;
+$background-color-gradient-start: #6a11cb;
+$background-color-gradient-end: #2575fc;
+$form-background-color: white;
+$input-background-color: #f3f3f3;
+$input-border-color: #ddd;
+$button-bg-color: lightslategray;
+$button-hover-bg-color: #5a189a;
+$font-family-main: 'Roboto', sans-serif;
+$font-color: black;
+$font-size-large: 30px;
+$font-size-medium: 20px;
+$font-size-small: 14px;
+$main-width: 20vw;
+$main-height: 57vh;
+$form-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+// Body
+body {
+  font-family: $font-family-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, $background-color-gradient-start, $background-color-gradient-end);
+}
+
+// Main Container
+.main {
+  background-color: $background-color-light;
+  margin-bottom: 10%;
+  border-radius: 2%;
+  width: $main-width;
+  height: $main-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40%;
+}
+
+// Typography
+.username, .password {
+  font-size: $font-size-large;
+  font-weight: bold;
+}
+
+// Input Styling
+input {
+  text-align: center;
+  width: 80%;
+  height: 20px;
+  margin-bottom: 10px;
+  font-size: $font-size-medium;
+  padding: 10px;
+  background-color: $input-background-color;
+  border: 1px solid $input-border-color;
+}
+
+// Button Styling
+.signin {
+  width: 50%;
+  height: 30px;
+  background-color: $button-bg-color;
+  margin-left: 17%; 
+  margin-top: 10%;
+  font-size: $font-size-medium;
+  cursor: pointer;
+
+  &:hover {
+    background-color: pink;
+  }
+}
+.Reset {
+  width: 50%;
+  height: 30px;
+  background-color: $button-bg-color;
+  margin-left: 17%;
+  margin-top: 10%;
+  font-size: $font-size-medium;
+  cursor: pointer;
+
+  &:hover {
+    background-color: red;
+  }
+}
+
+.login-btn{
+  width: 50%;
+  height: 30px;
+  background-color: $button-bg-color;
+  margin-left: 17%;
+  margin-top: 10%;
+  font-size: $font-size-medium;
+  cursor: pointer;
+
+@extend.login-btn;
+    background-color: rgb(201, 254, 26);
+  }
+
+
+
+// Legend
+legend {
+  font-size: 25px;
+}
+
+// Form Container
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 5%;
+  background-color: lightcoral;
+  border-radius: 5%;
+}
+
+// Form Structure
+.form-container {
+  background-color: $form-background-color;
+
+  border-radius: 20px;
+  box-shadow: $form-shadow;
+  width: 320px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: $font-size-small;
+    color: #666;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid $input-border-color;
+    background-color: $input-background-color;
+    font-size: $font-size-small;
+    color: #333;
+  }
+
+  .name-fields {
+    display: flex;
+    justify-content: space-between;
+
+    .input-field.half {
+      width: 48%;
+    }
+  }
+}
+
+// Link Styling
+a {
+  color: $background-color-gradient-end;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: green;
+  }
+}
+
+// Button
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: $button-bg-color;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: pink;
+  }
+}
