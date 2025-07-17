@@ -1,83 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Message App</title>
+    <title>NODE JS forntend</title>
     <style>
+ body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f4f8;
+        margin: 0;
+        padding: 0;
+      }
       .container {
-        margin-top: 10%;
+        margin: 5% auto;
+        max-width: 400px;
         text-align: center;
-      }
-      .message {
-        background-color: aqua;
-        color: black;
-        min-height: 20vh;
-        width: 30vw;
-        border-radius: 20px;
-        margin: 20px auto;
-        padding: 10px;
-        overflow-y: auto;
-      }
-      .buttons {
-        margin-top: 10px;
+        background-color: #ffffff;
+        padding: 30px 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
       input {
-        margin: 5px;
-        padding: 5px;
+        margin: 10px 0;
+        padding: 10px 15px;
+        border: 1.5px solid #ccc;
+        border-radius: 8px;
+        width: 90%;
+        color: #333;
+        background-color: #fafafa;
+        height: 45px;
+        font-size: 18px;
+        font-family: inherit;
+        transition: border-color 0.3s ease;
+      }
+      input:focus {
+        outline: none;
+        border-color: #4a90e2;
+        background-color: #fff;
+      }
+      .buttons {
+        margin-top: 15px;
+      }
+      button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        width: 100px;
+        height: 45px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #4a90e2;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      button:hover {
+        background-color: #357abd;
+        text-transform: uppercase;
+        transform: scale(1.05);
+      }
+      .message {
+        background-color: #bfe7fa;
+        color: #7d7d7d;
+        min-height: 20vh;
+        max-height: 300px;
+        width: 40%;
+        margin: 20px auto 40px auto;
+        padding: 15px 20px;
+        border-radius: 15px;
+        overflow-y: auto;
+        box-shadow: inset 0 0 8px rgba(0, 119, 190, 0.2);
+        font-size: 16px;
+        line-height: 1.4;
+        text-align: left;
       }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <input type="text" id="input-name" placeholder="Name" />
-      <input type="text" id="input-message" placeholder="Message" />
-      <div class="buttons">
-        <button onclick="postmessage()">Post</button>
-        <button onclick="getmessage()">Get</button>
-      </div>
+        <input type="text" id="input-name" placeholder="Name" />
+        <br>
+
+        <input type="text" id="input-message" placeholder="Message" />
+        <div class="buttons">
+            <button onclick="postmessage()">Post</button>
+            <button onclick="getmessage()">Get</button>
+        </div>
     </div>
 
     <div class="message" id="message"></div>
 
     <script>
-      async function postmessage() {
-        const name = document.getElementById("input-name").value.trim();
-        const message = document.getElementById("input-message").value.trim();
-
-       
+        async function postmessage() {
+            const name = document.getElementById("input-name").value.trim();
+            const message = document.getElementById("input-message").value.trim();
 
 
-        const data = JSON.stringify({ name: name, message: message });
 
-        const response = await fetch("http://127.0.0.1:3000/post-message", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
 
-        const result = await response.text();
-        alert(result);
+            const data = JSON.stringify({ name: name, message: message });
 
-        document.getElementById("input-name").value = "";
-        document.getElementById("input-message").value = "";
-      }
+            const response = await fetch("http://127.0.0.1:3000/post-message", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
 
-      async function getmessage() {
-        const response = await fetch("http://127.0.0.1:3000/students", {
-          method: "GET",
-        });
+            const result = await response.text();
+            alert(result);
 
-        const data = await response.json();
+            document.getElementById("input-name").value = "";
+            document.getElementById("input-message").value = "";
+        }
 
-        const messageDiv = document.getElementById("message");
-        messageDiv.innerHTML = "";
+        async function getmessage() {
+            const response = await fetch("http://127.0.0.1:3000/students", {
+                method: "GET",
+            });
 
-        data.forEach((msg) => {
-          messageDiv.innerHTML += `<p><strong>${msg.name}:</strong> ${msg.message}</p>`;
-        });
-      }
+            const data = await response.json();
+
+            const messageDiv = document.getElementById("message");
+            messageDiv.innerHTML = "";
+
+            data.forEach((msg) => {
+                messageDiv.innerHTML += `<p><strong>${msg.name}:</strong> ${msg.message}</p>`;
+            });
+        }
     </script>
-  </body>
+</body>
+
 </html>
