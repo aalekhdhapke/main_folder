@@ -1,48 +1,48 @@
 const http = require("http");
-const { Result } = require("pg");
 
-const messageArray = []; 
-function myfunction (a,b,c){
-  c(Result)
-  return a + b
-}
-// function callback(X){     
-// }
+const messageArray = [];
+
 const server = http.createServer((req, res) => {
+  console.log("User Agent:", req.headers["user-agent"]);
 
-  // let Z = myfunction (5,10,(X) =>{
-  //   console.log("callback function : " + X)             
-
-  // });
-  console.log(req.headers["user-agent"]);
-  
+  // CORS policy
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  const studentsData = [
-    {message:"hello",
-     name:"alekh"
-
-    },
-    {message:"hello world",
-      name:"ayush l"
- 
-     }, 
-     {message:"hello world bye",
-      name:"ayush B"
- 
-     },
-  ]
-
-  if ( req.url === "/get-messages") {
+  if (req.method === "GET" && req.url === "/students") {
     res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(JSON.stringify(messageArray));
+    res.end(JSON.stringify(studentsData));
+  } else if (req.method === "POST" && req.url === "/students") {
+    let body = "";
+
+    req.on("data", (chunk) => {
+      body += chunk;
+    });
+
+    req.on("end", () => {
+      try {
+        const student = JSON.parse(body);
+        console.log("Received student:", student);
+
+        studentsData.push(student);
+
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(
+          JSON.stringify({ message: "Student data received successfully" })
+        );
+      } catch (error) {
+        res.writeHead(400, { "Content-Type": "text/plain" });
+        res.end("Invalid JSON data");
+      }
+    });
   }
 
-  else if ( req.url === "/post-message") {
+  // Route: POST /post-message
+  else if (req.method === "POST" && req.url === "/post-message") {
     let data = "";
 
-    req.on("data", (chunk) => {       
+    req.on("data", (chunk) => {
       data += chunk;
     });
 
@@ -50,6 +50,7 @@ const server = http.createServer((req, res) => {
       try {
         const parsed = JSON.parse(data);
         messageArray.push(parsed);
+
         res.writeHead(200, { "Content-Type": "text/plain" });
         res.end("Message posted successfully");
       } catch (error) {
@@ -57,15 +58,13 @@ const server = http.createServer((req, res) => {
         res.end("Invalid JSON");
       }
     });
-  }
-
-  else {
+  } else {
     res.writeHead(404, { "Content-Type": "text/plain" });
-    res.end("Not Found ");
+    res.end("Not Found");
   }
 });
 
 // Start server
 server.listen(3000, () => {
-  console.log("Server is running on port 3000");
+  console.log("Server is running on http://localhost:3000");
 });
